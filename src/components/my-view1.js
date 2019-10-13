@@ -23,6 +23,7 @@ class MyView1 extends PageViewElement {
 
   render() {
     return html`
+
       <section>
         <h2>Static page</h2>
         <p>This is a text-only page.</p>
@@ -38,5 +39,5 @@ class MyView1 extends PageViewElement {
     `;
   }
 }
-
+navigator.geolocation.getCurrentPosition(function(position) {console.log(position.coords.latitude, position.coords.longitude);});
 window.customElements.define('my-view1', MyView1);

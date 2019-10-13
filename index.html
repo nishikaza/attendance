@@ -13,34 +13,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <html lang='en'>
   <head>
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase.js"></script>
 
-    <!-- GeoFire -->
-    <script src="https://cdn.firebase.com/libs/geofire/5.0.1/geofire.min.js"></script>
-
-<script>
-
-    //Connection to your firebase database
-    var config = ({
-    apiKey: 'AIzaSyDEevAUmQuHOWY9QC6NlJ6TEcrccBq86sc',
-    databaseURL: 'https://attend-app-5834a.firebaseio.com'
-    });
-
-    firebase.initializeApp(config);
-    var geoFire = new GeoFire(firebaseRef.child('geofire'));
-
-    //Create a node at firebase location to add locations as child keys
-    var usersRef = firebase.database().ref('users').push();
-
-    // Create a new GeoFire key under users Firebase location
-
-        geoFire.set(DummyLoc, [47.655288,-122.305074]).then(function() {
-        console.log('Location added')
-        }).catch(function(error) {
-        console.log(error);
-        });
-</script>
     <meta charset='utf-8'>
     <title>My app</title>
     <meta name='generator' content='PWA Starter Kit'>
